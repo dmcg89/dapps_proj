@@ -1,15 +1,15 @@
 pragma solidity ^0.5.0;
 
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
-import "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "./Metadata.sol";
 
 contract StrainBase is ERC721Full, Ownable {
     address public metadata;
 
     constructor(string memory name, string memory symbol, address _metadata) public ERC721Full(name, symbol) {
-        name = "StrainBase";
-        symbol = "RGB";
+        name = name;
+        symbol = symbol;
         metadata = _metadata;
     }
 
